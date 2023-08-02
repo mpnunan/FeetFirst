@@ -1,8 +1,8 @@
 {
-  "name": "feet-first",
+  "name": "feetfirst",
   "private": true,
   "version": "1.0.0",
-  "author": "Feet First",
+  "author": "FeetFirst",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
