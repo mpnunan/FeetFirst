@@ -27,7 +27,7 @@ UserProfile.propTypes = {
     last_name: PropTypes.string,
     email: PropTypes.string,
     uid: PropTypes.string,
-    id: PropTypes.string,
+    firebaseKey: PropTypes.string,
 
   }).isRequired,
 };
