@@ -19,8 +19,9 @@ export default function UserProfile() {
     </div>
   );
 }
-
+// DOES PROPTYPES NEED TO BE HERE? THROWS AN ERROR WHEN ACTIVE BUT NOT WHEN DISABLED OR REMOVED
 UserProfile.propTypes = {
+  // eslint-disable-next-line react/require-default-props
   userObj: PropTypes.shape({
     username: PropTypes.string,
     first_name: PropTypes.string,
@@ -29,5 +30,7 @@ UserProfile.propTypes = {
     uid: PropTypes.string,
     firebaseKey: PropTypes.string,
 
-  }).isRequired,
+  }),
 };
+// BELOW GOES AFTER userObj PropTYpes
+// .isRequired,
