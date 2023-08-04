@@ -11,7 +11,7 @@ export default function UserProfile() {
   const { user } = useAuth();
   return (
     <div><h1>{user.username}</h1>
-      <img src={user.image_url} alt="user" width="100px" height="100px" />
+      <img src={user.profile_image_url} alt="user" width="100px" height="100px" />
       <h3>{user.first_name} {user.last_name}</h3>
       <h4><b>Email:</b> {user.email}</h4>
       <Button type="button" size="lg" className="copy-btn" onClick={signOut}>
@@ -28,8 +28,7 @@ UserProfile.propTypes = {
     last_name: PropTypes.string,
     email: PropTypes.string,
     uid: PropTypes.string,
-    firebaseKey: PropTypes.string,
-    image_url: PropTypes.string,
+    profile_image_url: PropTypes.string,
 
   }).isRequired,
 };
