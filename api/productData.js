@@ -1,18 +1,7 @@
 import { clientCredentials } from '../utils/client';
 
-const getUserProducts = async (uid) => {
-  const response = await fetch(`${clientCredentials.databaseURL}/products.json?orderBy="uid"&equalTo="${uid}"`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
-  const products = await response.json();
-  return Object.values(products);
-};
-
 const getAllProducts = async () => {
-  const response = await fetch(`${clientCredentials.databaseURL}/products.json`, {
+  const response = await fetch(`${clientCredentials.databaseURL}/products`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -22,8 +11,8 @@ const getAllProducts = async () => {
   return Object.values(products);
 };
 
-const getSingleProduct = async (primaryKey) => {
-  const response = await fetch(`${clientCredentials.databaseURL}/products/{${primaryKey}.json`, {
+const getSingleProduct = async (id) => {
+  const response = await fetch(`${clientCredentials.databaseURL}/products/{${id}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -34,7 +23,7 @@ const getSingleProduct = async (primaryKey) => {
 };
 
 const createProduct = async (payload) => {
-  const response = await fetch(`${clientCredentials.databaseURL}/products/.json`, {
+  const response = await fetch(`${clientCredentials.databaseURL}/products/`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -46,7 +35,7 @@ const createProduct = async (payload) => {
 };
 
 const updateProduct = async (payload) => {
-  const response = await fetch(`${clientCredentials.databaseURL}/products/${payload.primaryKey}.json`, {
+  const response = await fetch(`${clientCredentials.databaseURL}/products/${payload.id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -57,8 +46,8 @@ const updateProduct = async (payload) => {
   return product;
 };
 
-const deletePlayer = async (primaryKey) => {
-  const response = await fetch(`${clientCredentials.databaseURL}/products/${primaryKey}.json`, {
+const deletePlayer = async (id) => {
+  const response = await fetch(`${clientCredentials.databaseURL}/products/${id}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
@@ -69,7 +58,6 @@ const deletePlayer = async (primaryKey) => {
 };
 
 export {
-  getUserProducts,
   getAllProducts,
   getSingleProduct,
   createProduct,
