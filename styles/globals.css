@@ -30,3 +30,27 @@ body {
 .banner-desc {
   margin-top: 45%;
 }
+
+#favoritesGallery {
+  height: 400px;
+  width: 100%;
+  margin: 40px auto;
+}
+
+.galleryItem {
+  height: 400px;
+  width: 100%;
+  ;
+}
+
+ #mediumImage > h3 {
+  --bs-heading-color: rgb(163, 179, 190);
+}
+
+#lightImage > h3 {
+  --bs-heading-color: rgb(50, 55, 59);
+}
+
+#darkImage > h3 {
+  --bs-heading-color: slategrey;
+}
