@@ -4,8 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap';
 import { useAuth } from '../utils/context/authContext';
-import
-{ signOut } from '../utils/auth';
+import updateUser from '../api/userData';
 
 export default function UserProfile() {
   const { user } = useAuth();
@@ -14,7 +13,7 @@ export default function UserProfile() {
       <img src={user.profile_image_url} alt="user" width="100px" height="100px" />
       <h3>{user.first_name} {user.last_name}</h3>
       <h4><b>Email:</b> {user.email}</h4>
-      <Button type="button" size="lg" className="copy-btn" onClick={signOut}>
+      <Button type="button" size="lg" className="copy-btn" onClick={updateUser}>
         Sign Out
       </Button>
     </div>
