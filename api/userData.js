@@ -1,7 +1,7 @@
 import { clientCredentials } from '../utils/client';
 
-const getSingleUser = async (primaryKey) => {
-  const response = await fetch(`${clientCredentials.databaseURL}/users/{${primaryKey}.json`, {
+const getSingleUser = async (id) => {
+  const response = await fetch(`${clientCredentials.databaseURL}/users/{${id}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -12,7 +12,7 @@ const getSingleUser = async (primaryKey) => {
 };
 
 const createUser = async (payload) => {
-  const response = await fetch(`${clientCredentials.databaseURL}/users/.json`, {
+  const response = await fetch(`${clientCredentials.databaseURL}/users/`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ const createUser = async (payload) => {
 };
 
 const updateUser = async (payload) => {
-  const response = await fetch(`${clientCredentials.databaseURL}/users/${payload.primaryKey}.json`, {
+  const response = await fetch(`${clientCredentials.databaseURL}/users/${payload.id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -35,8 +35,8 @@ const updateUser = async (payload) => {
   return user;
 };
 
-const deleteUser = async (primaryKey) => {
-  const response = await fetch(`${clientCredentials.databaseURL}/users/${primaryKey}.json`, {
+const deleteUser = async (id) => {
+  const response = await fetch(`${clientCredentials.databaseURL}/users/${id}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
