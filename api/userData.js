@@ -30,18 +30,18 @@ const createUser = async (payload) => {
   return newUser;
 };
 
-const updateUser = async (payload, uid) => {
-  const response = await fetch(`${clientCredentials.databaseURL}/users/${payload.id}`, {
+const editUser = (user, uid) => new Promise((resolve, reject) => {
+  fetch(`${clientCredentials.databaseURL}/users/${user.id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
       Authorization: `${uid}`,
     },
-    body: JSON.stringify(payload),
-  });
-  const user = await response.json();
-  return user;
-};
+    body: JSON.stringify(user),
+  })
+    .then((data) => resolve(data))
+    .catch(reject);
+});
 
 const deleteUser = async (id) => {
   const response = await fetch(`${clientCredentials.databaseURL}/users/${id}`, {
@@ -57,6 +57,6 @@ const deleteUser = async (id) => {
 export {
   getSingleUser,
   createUser,
-  updateUser,
+  editUser,
   deleteUser,
 };

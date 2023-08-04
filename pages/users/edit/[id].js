@@ -16,5 +16,5 @@ export default function UpdateUser() {
   }, [id]);
 
   // PASS OBJECT TO FORM
-  return (<RegisterForm obj={editUser} />);
+  return (<RegisterForm user={editUser} />);
 }

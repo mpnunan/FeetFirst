@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useRouter } from 'next/router';
 import { registerUser } from '../utils/auth'; // Update with path to registerUser
-import { getSingleUser } from '../api/userData';
+import { editUser, getSingleUser } from '../api/userData';
 
 function RegisterForm({ user, updateUser }) {
   const initialState = {
@@ -56,8 +56,7 @@ function RegisterForm({ user, updateUser }) {
         profileImageUrl: formData.profileImageUrl,
         uid: user.uid,
       };
-      updateUser(customer, user.uid).then(() => router.push('/profile'));
-      console.warn(formData);
+      editUser(customer, user.uid).then(() => router.push('/profile'));
     } else {
       registerUser(formData).then(() => updateUser(user.uid));
     }
