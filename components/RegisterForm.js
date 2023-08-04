@@ -31,6 +31,7 @@ function RegisterForm({ user, updateUser }) {
           userName: userObj.username,
           profileImageUrl: userObj.profile_image_url,
         }));
+        console.warn(userObj);
       });
     }
   }, [user, id]);
@@ -56,6 +57,7 @@ function RegisterForm({ user, updateUser }) {
         uid: user.uid,
       };
       updateUser(customer, user.uid).then(() => router.push('/profile'));
+      console.warn(formData);
     } else {
       registerUser(formData).then(() => updateUser(user.uid));
     }
@@ -97,9 +99,13 @@ function RegisterForm({ user, updateUser }) {
 
 RegisterForm.propTypes = {
   user: PropTypes.shape({
-    uid: PropTypes.string.isRequired,
+    uid: PropTypes.string,
   }).isRequired,
-  updateUser: PropTypes.func.isRequired,
+  updateUser: PropTypes.func,
+};
+
+RegisterForm.defaultProps = {
+  updateUser: () => {},
 };
 
 export default RegisterForm;

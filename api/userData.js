@@ -1,15 +1,22 @@
 import { clientCredentials } from '../utils/client';
 
-const getSingleUser = async (id) => {
-  const response = await fetch(`${clientCredentials.databaseURL}/users/{${id}`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
-  const user = await response.json();
-  return user;
-};
+// const getSingleUser = async (id) => {
+//   const response = await fetch(`${clientCredentials.databaseURL}/users/${id}`, {
+//     method: 'GET',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//   });
+//   const user = await response.json();
+//   return user;
+// };
+
+const getSingleUser = (id) => new Promise((resolve, reject) => {
+  fetch(`${clientCredentials.databaseURL}/users/${id}`)
+    .then((response) => response.json())
+    .then(resolve)
+    .catch(reject);
+});
 
 const createUser = async (payload) => {
   const response = await fetch(`${clientCredentials.databaseURL}/users/`, {
@@ -23,11 +30,12 @@ const createUser = async (payload) => {
   return newUser;
 };
 
-const updateUser = async (payload) => {
+const updateUser = async (payload, uid) => {
   const response = await fetch(`${clientCredentials.databaseURL}/users/${payload.id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
+      Authorization: `${uid}`,
     },
     body: JSON.stringify(payload),
   });

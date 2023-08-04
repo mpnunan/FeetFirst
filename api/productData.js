@@ -1,10 +1,11 @@
 import { clientCredentials } from '../utils/client';
 
-const getAllProducts = async () => {
+const getAllProducts = async (uid) => {
   const response = await fetch(`${clientCredentials.databaseURL}/products`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
+      Authorization: `${uid}`,
     },
   });
   const products = await response.json();
