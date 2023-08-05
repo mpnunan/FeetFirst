@@ -1,4 +1,8 @@
 @import 'bootstrap/dist/css/bootstrap.css';
+/* @import 'https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;1,600&display=swap'; */
+/* @import 'https://fonts.googleapis.com/css2?family=Borel&family=Crimson+Text&display=swap'; */
+/* @import 'https://fonts.googleapis.com/css2?family=Borel&family=Crimson+Text&family=Roboto+Condensed:wght@700&display=swap'; */
+@import 'https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap';
 
 html,
 body {
@@ -21,16 +25,33 @@ body {
   background-color: whitesmoke;
 }
 
-#homepageCover {
+/* #homepageCover {
   background: url("/shoe-cover.png");
   background-repeat: no-repeat;
-  /* background-size: cover; */
+  background-size: cover;
+} */
+
+.homepage-desc {
+  /* className="text-center d-flex flex-column justify-content-center align-content-center" */
+  /* font-family: 'Borel' 'cursive'; */
+  /* font-family: 'Roboto Condensed', sans-serif; */
+  font-family: 'Crimson Text', serif;
+  text-align: center;
+  align-content: center;
+  height: '90vh';
+  padding: '30px';
+  max-Width: '400px';
+  margin: '0 auto';
+  font-size: 20,
 }
 
 .banner-desc {
   margin-top: 45%;
 }
 
+#homeGallery {
+  margin: 40px auto;
+}
 /* MN-Styling */
 
 #favoritesGallery {
@@ -60,6 +81,10 @@ body {
 #darkImage {
   --bs-heading-color: rgb(206, 224, 241);
   text-shadow: 0px 0px 1px white;
+}
+
+.user-profile {
+  margin: 40px auto;
 }
 
 .favoritesCardContainer {
