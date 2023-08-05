@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-// import Link from 'next/link';
+import Link from 'next/link';
 
 function ShoeCard({ shoeObj }) {
   return (
@@ -10,6 +10,9 @@ function ShoeCard({ shoeObj }) {
       <Card.Img variant="top" src={shoeObj.image_url} alt={shoeObj.title} style={{ height: '400px' }} />
       <Card.Body>
         <Card.Title>{shoeObj.title}</Card.Title>
+        <Link href={`/products/${shoeObj.id}`} passHref>
+          <Button variant="primary" className="m-2">VIEW</Button>
+        </Link>
       </Card.Body>
     </Card>
   );
@@ -19,6 +22,7 @@ ShoeCard.propTypes = {
   shoeObj: PropTypes.shape({
     image_url: PropTypes.string,
     title: PropTypes.string,
+    id: PropTypes.number,
   }).isRequired,
 };
 
