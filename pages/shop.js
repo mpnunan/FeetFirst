@@ -23,7 +23,6 @@ export default function Shop() {
 
   return (
     <>
-      <div>Shopping Page for product catalog inventory cards</div>
       <div className="text-center my-4">
         <div className="d-flex flex-wrap">
           {/* MAPS OVER SHOES USING THE SHOECARD COMPONENT */}
