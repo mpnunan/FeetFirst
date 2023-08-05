@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import RegisterForm from '../../../components/RegisterForm';
 import { getSingleUser } from '../../../api/userData';
+import RegisterForm from '../../../components/RegisterForm';
 
 export default function UpdateUser() {
   const [editUser, setEditUser] = useState({});
@@ -10,11 +10,15 @@ export default function UpdateUser() {
   // GRAB ID
   const { id } = router.query;
 
-  // MAKE CALL TO API TO GET USER DATA
+  // MAKE CALL TO API TO GET USER DATAs
   useEffect(() => {
     getSingleUser(id).then(setEditUser);
   }, [id]);
 
   // PASS OBJECT TO FORM
-  return (<RegisterForm user={editUser} />);
+  return (
+    <div>
+      <RegisterForm user={editUser} />
+    </div>
+  );
 }

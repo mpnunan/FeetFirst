@@ -4,15 +4,15 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useRouter } from 'next/router';
 import { registerUser } from '../utils/auth'; // Update with path to registerUser
-import { editUser, getSingleUser } from '../api/userData';
+import { getSingleUser, editUser } from '../api/userData';
 
 function RegisterForm({ user, updateUser }) {
   const initialState = {
     firstName: '',
     lastName: '',
+    username: '',
     email: '',
     profileImageUrl: '',
-    userName: '',
     uid: user.uid,
   };
   const [formData, setFormData] = useState(initialState);
@@ -27,8 +27,8 @@ function RegisterForm({ user, updateUser }) {
           id: userObj.id,
           firstName: userObj.first_name,
           lastName: userObj.last_name,
+          username: userObj.username,
           email: userObj.email,
-          userName: userObj.username,
           profileImageUrl: userObj.profile_image_url,
         }));
         console.warn(userObj);
@@ -47,16 +47,16 @@ function RegisterForm({ user, updateUser }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.id) {
-      const customer = {
+      const rareUser = {
         id: formData.id,
         firstName: formData.firstName,
         lastName: formData.lastName,
+        username: formData.username,
         email: formData.email,
-        userName: formData.userName,
         profileImageUrl: formData.profileImageUrl,
         uid: user.uid,
       };
-      editUser(customer, user.uid).then(() => router.push('/profile'));
+      editUser(rareUser, user.uid).then(() => router.push('/profile'));
     } else {
       registerUser(formData).then(() => updateUser(user.uid));
     }
@@ -76,7 +76,7 @@ function RegisterForm({ user, updateUser }) {
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Username</Form.Label>
-        <Form.Control as="textarea" name="userName" required value={formData.userName} onChange={handleChange} />
+        <Form.Control as="textarea" name="username" required value={formData.username} onChange={handleChange} />
         <Form.Text className="text-muted" />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicEmail">
