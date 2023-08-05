@@ -2,16 +2,16 @@ import { Accordion, Button, Image } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { useAuth } from '../utils/context/authContext';
 
-export default function AccordionRow({ favoriteProduct, onUpdate }) {
+export default function AccordionRow({ favoriteProduct, onUpdate, keyNumber }) {
   const { user } = useAuth();
   const removeFavorite = () => {
-    if (window.confirm(`Delete ${favoriteProduct.title}?`)) {
+    if (window.confirm(`Delete ${favoriteProduct?.title}?`)) {
       removeFavorite(favoriteProduct.id, user.uid).then(() => onUpdate());
     }
   };
 
   return (
-    <Accordion.Item eventKey="1">
+    <Accordion.Item eventKey={keyNumber}>
       <Accordion.Header className="favoritesCardContainer">
         <Image className="favoritePic" src={favoriteProduct.image_url} />
         <div className="favoritesCardHeader">Shoes description</div>
@@ -39,4 +39,5 @@ AccordionRow.propTypes = {
     id: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
+  keyNumber: PropTypes.number.isRequired,
 };
