@@ -1,14 +1,22 @@
 import { Accordion, Button, Image } from 'react-bootstrap';
+import PropTypes from 'prop-types';
+import { useAuth } from '../utils/context/authContext';
 
-export default function AccordionRow() {
+export default function AccordionRow({ favoriteProduct, onUpdate }) {
+  const { user } = useAuth();
+  const removeFavorite = () => {
+    if (window.confirm(`Delete ${favoriteProduct.title}?`)) {
+      removeFavorite(favoriteProduct.id, user.uid).then(() => onUpdate());
+    }
+  };
+
   return (
     <Accordion.Item eventKey="1">
       <Accordion.Header className="favoritesCardContainer">
-        <Image className="favoritePic" src="https://images.unsplash.com/photo-1626947346165-4c2288dadc2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" />
+        <Image className="favoritePic" src={favoriteProduct.image_url} />
         <div className="favoritesCardHeader">Shoes description</div>
         <div className="favBtnContainer">
-          <Button className="favBtn" variant="dark">Remove Favorite</Button>
-          <Button className="favBtn" variant="dark">Add to Cart</Button>
+          <Button className="favBtn" variant="dark" onClick={removeFavorite}>Remove Favorite</Button>
         </div>
       </Accordion.Header>
       <Accordion.Body>
@@ -23,3 +31,12 @@ export default function AccordionRow() {
     </Accordion.Item>
   );
 }
+
+AccordionRow.propTypes = {
+  favoriteProduct: PropTypes.shape({
+    image_url: PropTypes.string,
+    title: PropTypes.string,
+    id: PropTypes.string,
+  }).isRequired,
+  onUpdate: PropTypes.func.isRequired,
+};
