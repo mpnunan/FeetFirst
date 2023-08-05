@@ -43,14 +43,19 @@ body {
   ;
 }
 
- #mediumImage > h3 {
-  --bs-heading-color: rgb(163, 179, 190);
+ #mediumImage {
+  --bs-heading-color: white;
+  text-shadow: 0px 0px 2px rgb(144, 149, 175);
+  font-size: 64px;
+  font-weight: bold;
 }
 
-#lightImage > h3 {
-  --bs-heading-color: rgb(50, 55, 59);
+#lightImage {
+  --bs-heading-color: rgb(39, 43, 46);
+  text-shadow: 0px 0px 1px black;
 }
 
-#darkImage > h3 {
-  --bs-heading-color: slategrey;
+#darkImage {
+  --bs-heading-color: rgb(206, 224, 241);
+  text-shadow: 0px 0px 1px white;
 }
