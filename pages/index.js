@@ -3,10 +3,10 @@ import { Button } from 'react-bootstrap';
 // import Link from 'react';
 // import { SHOP } from '../components/routers/routes';
 // import { signOut } from '../utils/auth';
-import { useAuth } from '../utils/context/authContext';
+// import { useAuth } from '../utils/context/authContext';
 
 function Home() {
-  const { user } = useAuth();
+  // const { user } = useAuth();
   const router = useRouter();
   return (
     <div
@@ -20,8 +20,8 @@ function Home() {
         fontSize: 20,
       }}
     >
-      <h1>Hello {user.fbUser.displayName}! </h1>
-      <p>{user.first_name}</p>
+      {/* <h1>Hello {user.fbUser.displayName}! </h1>
+      <p>{user.first_name}</p> */}
       <div className="banner-desc">
         <p><em>The Perfect Pair...</em></p>
         <p>At Feet First we truly put your feet first! See and feel the difference walking in our shoes makes!</p>
