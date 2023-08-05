@@ -57,7 +57,6 @@ function RegisterForm({ user, updateUser }) {
         uid: user.uid,
       };
       editUser(customer, user.uid).then(() => router.push('/profile'));
-      console.warn(formData);
     } else {
       registerUser(formData).then(() => updateUser(user.uid));
     }
