@@ -1,3 +1,10 @@
+import { Accordion } from 'react-bootstrap';
+import AccordionRow from './AccordionRow';
+
 export default function FavoriteDisplay() {
-  console.warn('Favorites ONLY');
+  return (
+    <Accordion>
+      <AccordionRow />
+    </Accordion>
+  );
 }

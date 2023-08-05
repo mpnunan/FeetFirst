@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getAllProducts } from '../api/productData';
-import ShoeCard from '../components/shoeCard';
+import ShoeCard from '../components/ShoeCard';
 
 export default function Shop() {
   // SET A STATE FOR THE SHOE CARDS
