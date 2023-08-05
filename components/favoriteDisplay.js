@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Accordion } from 'react-bootstrap';
 import AccordionRow from './AccordionRow';
 import { useAuth } from '../utils/context/authContext';
-import getFavoriteProducts from '../api/favoriteData';
+import { findFavorites } from '../api/favoriteData';
 
 export default function FavoriteDisplay() {
   const [favorites, setFavorites] = useState([]);
@@ -11,15 +11,13 @@ export default function FavoriteDisplay() {
   const { user } = useAuth();
 
   const getFavorites = () => {
-    getFavoriteProducts(user.uid)
-      .then(setFavorites)
-      .then(() => {
-        setNum(num + 1);
-      });
+    findFavorites(user.uid)
+      .then(setFavorites);
   };
 
   useEffect(() => {
     getFavorites();
+    setNum(num + 1);
   }, []);
 
   return (
