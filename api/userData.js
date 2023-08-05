@@ -50,8 +50,8 @@ const deleteUser = async (id) => {
       'Content-Type': 'application/json',
     },
   });
-  const user = await response.json();
-  return user;
+  // const user = await response;
+  return response;
 };
 
 export {

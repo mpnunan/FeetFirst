@@ -2,12 +2,12 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-// import Image from 'next/image';
+import { Button, Image } from 'react-bootstrap';
+import Head from 'next/head';
 // import PropTypes from 'prop-types';
-import { Button } from 'react-bootstrap';
 import { useAuth } from '../utils/context/authContext';
-import { getSingleUser } from '../api/userData';
-// import { updateUser } from '../api/userData';
+import { signOut } from '../utils/auth';
+import { getSingleUser, deleteUser } from '../api/userData';
 
 export default function UserProfile() {
   const { user } = useAuth();
@@ -15,6 +15,13 @@ export default function UserProfile() {
 
   // SET A STATE FOR THE USER
   const [userDetails, setUserDetails] = useState({});
+
+  // FUNCTION TO DELETE USER PROFILE
+  const deleteProfile = () => {
+    if (window.confirm('Are you sure you would like to delete your profile? You cannot undo this action.')) {
+      deleteUser(user.id).then(() => signOut());
+    }
+  };
 
   // API FUNCTION TO GET SINGLE USER
   const getTheSingleUser = () => {
@@ -29,32 +36,36 @@ export default function UserProfile() {
   }, []);
 
   return (
-    <div><h1>{user.username}</h1>
-      <img src={user.profile_image_url} alt="user" width="100px" height="100px" />
-      <h3>{user.first_name} {user.last_name}</h3>
-      <h4><b>Email:</b> {user.email}</h4>
-      <Button
-        type="button"
-        size="lg"
-        className="copy-btn"
-        onClick={() => {
-          router.push(`/users/edit/${userDetails.id}`);
-        }}
-      >
-        Update
-      </Button>
-      <Button
-        type="button"
-        variant="danger"
-        size="lg"
-        className="copy-btn"
-        onClick={() => {
-          router.push(`/users/edit/${userDetails.id}`);
-        }}
-      >
-        Delete
-      </Button>
-    </div>
+    <>
+      <Head>
+        <title>Profile Page</title>
+      </Head>
+      <div className="d-flex flex-column">
+        <Image
+          className="plant-image"
+          src={userDetails.profile_image_url}
+          alt={userDetails.name}
+          style={{
+            width: '300px', borderRadius: '0px', border: '3px solid #014415', boxShadow: '6px 6px rgb(216, 208, 208)',
+          }}
+        />
+      </div>
+      <div className="profile-font" style={{ marginTop: '35px' }}>
+        <h2 className="post-details-title">{userDetails.first_name} {userDetails.last_name}</h2>
+        <h5 className="post-details-title">{userDetails.email}</h5>
+        <p className="post-details-text">User Name: <em>{userDetails.username}</em> </p>
+        <Button
+          className="sub-btn"
+          onClick={() => {
+            router.push(`/users/edit/${userDetails.id}`);
+          }}
+        >
+          Edit Profile
+        </Button>
+        <Button variant="danger" className="unsub-btn" onClick={deleteProfile}> Delete Profile
+        </Button>
+      </div>
+    </>
   );
 }
 // DOES PROPTYPES NEED TO BE HERE? THROWS AN ERROR WHEN ACTIVE BUT NOT WHEN DISABLED OR REMOVED
