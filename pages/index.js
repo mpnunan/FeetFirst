@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { Button } from 'react-bootstrap';
+import { Button, Image, Carousel } from 'react-bootstrap';
 // import Link from 'react';
 // import { SHOP } from '../components/routers/routes';
 // import { signOut } from '../utils/auth';
@@ -9,22 +9,34 @@ function Home() {
   // const { user } = useAuth();
   const router = useRouter();
   return (
-    <div
-      id="homepageCover"
-      className="text-center d-flex flex-column justify-content-center align-content-center"
-      style={{
-        height: '90vh',
-        padding: '30px',
-        maxWidth: '400px',
-        margin: '0 auto',
-        fontSize: 20,
-      }}
-    >
-      {/* <h1>Hello {user.fbUser.displayName}! </h1>
-      <p>{user.first_name}</p> */}
-      <div className="banner-desc">
+    <>
+      <div id="homePage" className="home-page">
+        <div id="homeGallery" className="homepage">
+          <Carousel fade>
+            <Carousel.Item>
+              <Image className="galleryItem" alt="Shoes" src="https://images.unsplash.com/photo-1620405116976-f735da963c02?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1983&q=80" />
+              <Carousel.Caption id="lightImage">
+                <h3 id="lightImage">Anywhere you want to go</h3>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <Image className="galleryItem" alt="Shoes" src="https://images.unsplash.com/photo-1604168612704-edf7120be425?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80" />
+              <Carousel.Caption id="darkImage">
+                <h3 id="darkImage">Let us put your best foot forward</h3>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <Image className="galleryItem" alt="Shoes" src="https://images.unsplash.com/photo-1505521216430-8b73b2067df0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" />
+              <Carousel.Caption>
+                <h2 id="mediumImage">FeetFirst</h2>
+              </Carousel.Caption>
+            </Carousel.Item>
+          </Carousel>
+        </div>
+      </div>
+      <div className="homepage-desc">
         <p><em>The Perfect Pair...</em></p>
-        <p>At Feet First we truly put your feet first! See and feel the difference walking in our shoes makes!</p>
+        <p>At Feet First we truly put your feet first! Whether on the trail or in your backyard, see and feel the difference walking in our shoes makes!</p>
         <Button
           variant="dark"
           type="button"
@@ -37,7 +49,7 @@ function Home() {
           Shop Now &rarr;
         </Button>
       </div>
-    </div>
+    </>
   );
 }
 
