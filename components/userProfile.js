@@ -43,6 +43,17 @@ export default function UserProfile() {
       >
         Update
       </Button>
+      <Button
+        type="button"
+        variant="danger"
+        size="lg"
+        className="copy-btn"
+        onClick={() => {
+          router.push(`/users/edit/${userDetails.id}`);
+        }}
+      >
+        Delete
+      </Button>
     </div>
   );
 }
