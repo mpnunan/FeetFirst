@@ -1,7 +1,4 @@
 @import 'bootstrap/dist/css/bootstrap.css';
-/* @import 'https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;1,600&display=swap'; */
-/* @import 'https://fonts.googleapis.com/css2?family=Borel&family=Crimson+Text&display=swap'; */
-/* @import 'https://fonts.googleapis.com/css2?family=Borel&family=Crimson+Text&family=Roboto+Condensed:wght@700&display=swap'; */
 @import 'https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap';
 
 html,
@@ -21,20 +18,7 @@ a {
   box-sizing: border-box;
 }
 
-body {
-  background-color: whitesmoke;
-}
-
-/* #homepageCover {
-  background: url("/shoe-cover.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
-.homepage-desc {
-  /* className="text-center d-flex flex-column justify-content-center align-content-center" */
-  /* font-family: 'Borel' 'cursive'; */
-  /* font-family: 'Roboto Condensed', sans-serif; */
+.homepage-desc-text {
   font-family: 'Crimson Text', serif;
   text-align: center;
   align-content: center;
@@ -45,6 +29,11 @@ body {
   font-size: 20,
 }
 
+/* David Styling Start */
+body {
+  background-color: whitesmoke;
+}
+
 .banner-desc {
   margin-top: 45%;
 }
@@ -52,6 +41,19 @@ body {
 #homeGallery {
   margin: 40px auto;
 }
+
+.boot {
+  height: auto;
+  width: 40%;
+}
+
+.profile-btn {
+  display: inline-flex;
+}
+
+/* David Styling End */
+
+/* MN-Styling */
 
 #favoritesGallery {
   height: 400px;
@@ -62,7 +64,6 @@ body {
 .galleryItem {
   height: 400px;
   width: 100%;
-  ;
 }
 
  #mediumImage {
@@ -85,3 +86,42 @@ body {
 .user-profile {
   margin: 40px auto;
 }
+
+.favoritesCardContainer {
+  height: 52px;
+}
+
+.favoritesCardContainer > button {
+  height: inherit;
+  padding-left: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.favoritesCardHeader {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  white-space: nowrap;
+  text-indent: 24px;
+  width: fit-content;
+  line-height: 1.2;
+}
+
+.favoritePic {
+  height: inherit;
+  width: 72px;
+}
+
+.favBtnContainer {
+  display: flex;
+  width: 100%;
+  padding: 4px 8px;
+  justify-content: flex-end;
+}
+
+.favBtnContainer > .favBtn {
+  margin: 0px 4px 0px 4px;
+}
+
+/* MN Styling */

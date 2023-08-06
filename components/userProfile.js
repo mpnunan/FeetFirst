@@ -55,14 +55,15 @@ export default function UserProfile() {
         <h5 className="post-details-title">{userDetails.email}</h5>
         <p className="post-details-text">User Name: <em>{userDetails.username}</em> </p>
         <Button
-          className="sub-btn"
+          className="profile-btn"
+          variant="info"
           onClick={() => {
             router.push(`/users/edit/${userDetails.id}`);
           }}
         >
           Edit Profile
         </Button>
-        <Button variant="danger" className="unsub-btn" onClick={deleteProfile}> Delete Profile
+        <Button variant="danger" className="profile-btn" style={{ marginLeft: 5 }} onClick={deleteProfile}> Delete Profile
         </Button>
       </div>
     </>
