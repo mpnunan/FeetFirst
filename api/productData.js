@@ -47,7 +47,7 @@ const updateProduct = async (payload) => {
   return product;
 };
 
-const deletePlayer = async (id) => {
+const deleteProducts = async (id) => {
   const response = await fetch(`${clientCredentials.databaseURL}/products/${id}`, {
     method: 'DELETE',
     headers: {
@@ -63,5 +63,5 @@ export {
   getSingleProduct,
   createProduct,
   updateProduct,
-  deletePlayer,
+  deleteProducts,
 };
