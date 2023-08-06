@@ -48,7 +48,7 @@ function Home() {
       </div>
       <div className="homepage-desc-text">
         <p><em>The Perfect Pair...</em></p>
-        <p>At Feet First we truly put your feet first! Whether a night out on the town, on the trail or in your backyard, see and feel the difference our shoes makes!</p>
+        <p>At Feet First we truly put your feet first! Whether a night out on the town, on the trail or in your backyard, see and feel the difference our shoes make!</p>
         <Button
           variant="dark"
           type="button"
