@@ -18,6 +18,7 @@ a {
   box-sizing: border-box;
 }
 
+/* David Styling Start */
 .homepage-desc-text {
   font-family: 'Crimson Text', serif;
   text-align: center;
@@ -29,7 +30,6 @@ a {
   font-size: 20,
 }
 
-/* David Styling Start */
 body {
   background-color: whitesmoke;
 }
@@ -51,10 +51,47 @@ body {
   display: inline-flex;
 }
 
+.user-profile {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.user-profile-page {
+  text-align: center;
+}
+
+.footer {
+  font-family: 'Crimson Text', serif;
+  min-height: 100vh;
+}
+
+.footer-body {
+  position: fixed;
+  background-color: whitesmoke;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  text-align: right;
+}
+
+footer {
+  position: fixed;
+  background-color: whitesmoke;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  text-align: center;
+}
+
+.footer-right {
+  position: fixed;
+  text-align: right;
+}
 /* David Styling End */
 
 /* MN-Styling */
-
 #favoritesGallery {
   height: 400px;
   width: 100%;
@@ -81,10 +118,6 @@ body {
 #darkImage {
   --bs-heading-color: rgb(206, 224, 241);
   text-shadow: 0px 0px 1px white;
-}
-
-.user-profile {
-  margin: 40px auto;
 }
 
 .favoritesCardContainer {
@@ -123,5 +156,4 @@ body {
 .favBtnContainer > .favBtn {
   margin: 0px 4px 0px 4px;
 }
-
 /* MN Styling */

@@ -1,5 +1,7 @@
 import { useRouter } from 'next/router';
 import { Button, Image, Carousel } from 'react-bootstrap';
+import Footer from '../components/Footer';
+
 // import Link from 'react';
 // import { SHOP } from '../components/routers/routes';
 // import { signOut } from '../utils/auth';
@@ -58,6 +60,9 @@ function Home() {
         >
           Shop Now &rarr;
         </Button>
+      </div>
+      <div className="footer">
+        <Footer />
       </div>
     </>
   );

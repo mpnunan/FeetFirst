@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel, Image } from 'react-bootstrap';
+import Footer from '../components/Footer';
 
 export default function Favorites() {
   return (
@@ -29,6 +30,9 @@ export default function Favorites() {
       </div>
       <div id="favoritesContent" className="favorites">
         This is where our favorites will go. Where will you go?
+      </div>
+      <div className="footer">
+        <Footer />
       </div>
     </div>
   );
