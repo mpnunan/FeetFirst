@@ -41,6 +41,7 @@ body {
 #homeGallery {
   margin: 40px auto;
 }
+/* MN-Styling */
 
 .boot {
   height: auto;
@@ -120,6 +121,44 @@ footer {
   text-shadow: 0px 0px 1px white;
 }
 
+.favoritesCardContainer {
+  height: 52px;
+}
+
+.favoritesCardContainer > button {
+  height: inherit;
+  padding-left: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.favoritesCardHeader {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  white-space: nowrap;
+  text-indent: 24px;
+  width: fit-content;
+  line-height: 1.2;
+}
+
+.favoritePic {
+  height: inherit;
+  width: 72px;
+}
+
+.favBtnContainer {
+  display: flex;
+  width: 100%;
+  padding: 4px 8px;
+  justify-content: flex-end;
+}
+
+.favBtnContainer > .favBtn {
+  margin: 0px 4px 0px 4px;
+}
+
+/* MN Styling */
 .favoritesCardContainer {
   height: 52px;
 }
