@@ -4,7 +4,6 @@ import Footer from '../components/Footer';
 
 export default function Favorites() {
   return (
-
     <div id="favoritesPage" className="favorites">
       <div id="favoritesGallery" className="favorites">
         <Carousel fade>
@@ -29,10 +28,7 @@ export default function Favorites() {
         </Carousel>
       </div>
       <div id="favoritesContent" className="favorites">
-        <h1>This is where your favorites will go. Where will you go?</h1>
-      </div>
-      <div id="favoritesAccordion">
-        <FavoriteDisplay />
+        <h6>This is where your favorites will go. Where will you go?</h6>
       </div>
       <div className="footer">
         <Footer />
