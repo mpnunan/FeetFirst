@@ -14,7 +14,7 @@ export default function AccordionRow({ favoriteProduct, onUpdate, keyNumber }) {
     <Accordion.Item eventKey={keyNumber}>
       <Accordion.Header className="favoritesCardContainer">
         <Image className="favoritePic" src={favoriteProduct.image_url} />
-        <div className="favoritesCardHeader">Shoes description</div>
+        <div className="favoritesCardHeader">{favoriteProduct.title}</div>
         <div className="favBtnContainer">
           <Button className="favBtn" variant="dark" onClick={removeFavorite}>Remove Favorite</Button>
         </div>
@@ -36,7 +36,7 @@ AccordionRow.propTypes = {
   favoriteProduct: PropTypes.shape({
     image_url: PropTypes.string,
     title: PropTypes.string,
-    id: PropTypes.string,
+    id: PropTypes.number,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
   keyNumber: PropTypes.number.isRequired,
