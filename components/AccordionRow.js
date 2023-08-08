@@ -1,12 +1,14 @@
+/* eslint-disable react/forbid-prop-types */
 import { Accordion, Button, Image } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { useAuth } from '../utils/context/authContext';
+import { deleteFavoriteProduct } from '../api/favoriteData';
 
 export default function AccordionRow({ favoriteProduct, onUpdate, keyNumber }) {
   const { user } = useAuth();
   const removeFavorite = () => {
     if (window.confirm(`Delete ${favoriteProduct.product.title}?`)) {
-      removeFavorite(favoriteProduct.id, user.uid).then(() => onUpdate());
+      deleteFavoriteProduct(favoriteProduct.product.id, user.uid).then(() => onUpdate());
     }
   };
 
@@ -33,8 +35,8 @@ export default function AccordionRow({ favoriteProduct, onUpdate, keyNumber }) {
 
 AccordionRow.propTypes = {
   favoriteProduct: PropTypes.shape({
-    user: PropTypes.number,
-    product: PropTypes.number,
+    user: PropTypes.object,
+    product: PropTypes.object,
     id: PropTypes.number,
     price: PropTypes.string,
   }).isRequired,
