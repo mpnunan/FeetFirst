@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel, Image } from 'react-bootstrap';
-import FavoriteDisplay from '../components/FavoriteDisplay';
+import FavoriteDisplay from '../components/favoriteDisplay';
 
 export default function Favorites() {
   return (
