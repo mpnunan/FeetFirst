@@ -1,10 +1,10 @@
 import React from 'react';
 import { Carousel, Image } from 'react-bootstrap';
 import FavoriteDisplay from '../components/favoriteDisplay';
+import Footer from '../components/Footer';
 
 export default function Favorites() {
   return (
-
     <div id="favoritesPage" className="favorites">
       <div id="favoritesGallery" className="favorites">
         <Carousel fade>
@@ -33,6 +33,9 @@ export default function Favorites() {
       </div>
       <div id="favoritesAccordion">
         <FavoriteDisplay />
+      </div>
+      <div className="footer">
+        <Footer />
       </div>
     </div>
   );

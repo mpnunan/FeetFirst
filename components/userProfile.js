@@ -40,7 +40,8 @@ export default function UserProfile() {
       <Head>
         <title>Profile Page</title>
       </Head>
-      <div className="d-flex flex-column">
+      {/* <div className="d-flex flex-column"> */}
+      <div className="user-profile-page">
         <Image
           className="plant-image"
           src={userDetails.profile_image_url}
@@ -55,14 +56,15 @@ export default function UserProfile() {
         <h5 className="post-details-title">{userDetails.email}</h5>
         <p className="post-details-text">User Name: <em>{userDetails.username}</em> </p>
         <Button
-          className="sub-btn"
+          className="profile-btn"
+          variant="outline-dark"
           onClick={() => {
             router.push(`/users/edit/${userDetails.id}`);
           }}
         >
           Edit Profile
         </Button>
-        <Button variant="danger" className="unsub-btn" onClick={deleteProfile}> Delete Profile
+        <Button variant="outline-dark" className="profile-btn" style={{ marginLeft: 5 }} onClick={deleteProfile}> Delete Profile
         </Button>
       </div>
     </>
