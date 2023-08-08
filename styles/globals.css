@@ -41,49 +41,35 @@ body {
 #homeGallery {
   margin: 40px auto;
 }
-/* MN-Styling */
 
 .boot {
   height: auto;
   width: 40%;
 }
 
-.profile-btn {
-  display: inline-flex;
+#shopCards {
+  margin-bottom: 10%;
+}
+
+#productCardDetails {
+  font-family: 'Crimson Text', serif;
 }
 
 .user-profile {
+  font-family: 'Crimson Text', serif;
   margin: 40px auto;
   text-align: center;
 }
 
-.user-profile-page {
-  text-align: center;
-}
-
-.footer {
-  font-family: 'Crimson Text', serif;
-  min-height: 100vh;
-}
-
-.footer-body {
-  position: fixed;
-  background-color: whitesmoke;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 8px;
-  text-align: right;
-}
-
 footer {
   position: fixed;
-  background-color: whitesmoke;
+  background-color: #F8F9FA;
   bottom: 0;
   left: 0;
   right: 0;
   padding: 8px;
   text-align: center;
+  font-family: 'Crimson Text', serif;
 }
 
 .footer-right {

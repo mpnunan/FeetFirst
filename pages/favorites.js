@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { Carousel, Image } from 'react-bootstrap';
 import FavoriteDisplay from '../components/favoriteDisplay';
 import Footer from '../components/Footer';
@@ -6,6 +7,9 @@ import Footer from '../components/Footer';
 export default function Favorites() {
   return (
     <div id="favoritesPage" className="favorites">
+      <Head>
+        <title>Favorites Page</title>
+      </Head>
       <div id="favoritesGallery" className="favorites">
         <Carousel fade>
           <Carousel.Item>
