@@ -1,4 +1,8 @@
 @import 'bootstrap/dist/css/bootstrap.css';
+/* @import 'https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;1,600&display=swap'; */
+/* @import 'https://fonts.googleapis.com/css2?family=Borel&family=Crimson+Text&display=swap'; */
+/* @import 'https://fonts.googleapis.com/css2?family=Borel&family=Crimson+Text&family=Roboto+Condensed:wght@700&display=swap'; */
+@import 'https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap';
 
 html,
 body {
@@ -21,16 +25,33 @@ body {
   background-color: whitesmoke;
 }
 
-#homepageCover {
+/* #homepageCover {
   background: url("/shoe-cover.png");
   background-repeat: no-repeat;
-  /* background-size: cover; */
+  background-size: cover;
+} */
+
+.homepage-desc {
+  /* className="text-center d-flex flex-column justify-content-center align-content-center" */
+  /* font-family: 'Borel' 'cursive'; */
+  /* font-family: 'Roboto Condensed', sans-serif; */
+  font-family: 'Crimson Text', serif;
+  text-align: center;
+  align-content: center;
+  height: '90vh';
+  padding: '30px';
+  max-Width: '400px';
+  margin: '0 auto';
+  font-size: 20,
 }
 
 .banner-desc {
   margin-top: 45%;
 }
 
+#homeGallery {
+  margin: 40px auto;
+}
 /* MN-Styling */
 
 #favoritesGallery {
@@ -104,6 +125,92 @@ body {
   bottom: -100%;
   font-size: small;
   transition: all .4s ease-in-out;
+}
+
+/* MN Styling */
+
+.user-profile {
+  margin: 40px auto;
+}
+
+.favoritesCardContainer {
+  height: 52px;
+}
+
+.favoritesCardContainer > button {
+  height: inherit;
+  padding-left: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.favoritesCardHeader {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  white-space: nowrap;
+  text-indent: 24px;
+  width: fit-content;
+  line-height: 1.2;
+}
+
+.favoritePic {
+  height: inherit;
+  width: 72px;
+}
+
+.favBtnContainer {
+  display: flex;
+  width: 100%;
+  padding: 4px 8px;
+  justify-content: flex-end;
+}
+
+.favBtnContainer > .favBtn {
+  margin: 0px 4px 0px 4px;
+}
+
+/* MN Styling */
+
+.user-profile {
+  margin: 40px auto;
+}
+
+.favoritesCardContainer {
+  height: 52px;
+}
+
+.favoritesCardContainer > button {
+  height: inherit;
+  padding-left: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.favoritesCardHeader {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  white-space: nowrap;
+  text-indent: 24px;
+  width: fit-content;
+  line-height: 1.2;
+}
+
+.favoritePic {
+  height: inherit;
+  width: 72px;
+}
+
+.favBtnContainer {
+  display: flex;
+  width: 100%;
+  padding: 4px 8px;
+  justify-content: flex-end;
+}
+
+.favBtnContainer > .favBtn {
+  margin: 0px 4px 0px 4px;
 }
 
 /* MN Styling */

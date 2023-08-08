@@ -1,7 +1,8 @@
 import { clientCredentials } from '../utils/client';
+import { getAllProducts } from './productData';
 
-const getFavoriteProduct = async (productId, uid) => {
-  const response = await fetch(`${clientCredentials.databaseURL}/products/${productId}/favorite`, {
+const getFavoriteProduct = async (userId, uid) => {
+  const response = await fetch(`${clientCredentials.databaseURL}/favorite_products?user=${userId}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -25,7 +26,7 @@ const createFavoriteProduct = async (productId, uid) => {
 };
 
 const deleteFavoriteProduct = async (productId, uid) => {
-  const response = await fetch(`${clientCredentials.databaseURL}/products/${productId}/unfavorite`, {
+  const response = await fetch(`${clientCredentials.databaseURL}/products/${productId}/unFavorite`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
@@ -35,4 +36,32 @@ const deleteFavoriteProduct = async (productId, uid) => {
   return response;
 };
 
-export { getFavoriteProduct, deleteFavoriteProduct, createFavoriteProduct };
+// const findFavorites = async (uid) => {
+//   await getAllProducts(uid).then((productArray) => {
+//     const favoriteArray = [];
+//     productArray.forEach((product) => {
+//       if (getSingleProduct(product.id) === getFavoriteProduct({}.product, uid)) {
+//         favoriteArray.push(product);
+//       }
+//     });
+//     return favoriteArray;
+//   });
+// };
+
+const findFavorites = async (uid) => {
+  const products = await getAllProducts(uid);
+  const favorites = products.forEach((product) => {
+    if (getFavoriteProduct(product.id, uid) === true) {
+      console.warn(product);
+      favorites.push(product);
+    }
+  });
+  return favorites;
+};
+
+export {
+  getFavoriteProduct,
+  deleteFavoriteProduct,
+  createFavoriteProduct,
+  findFavorites,
+};
