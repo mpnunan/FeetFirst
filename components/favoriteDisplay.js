@@ -9,7 +9,6 @@ import { getFavoriteProduct } from '../api/favoriteData';
 
 export default function FavoriteDisplay() {
   const [favorites, setFavorites] = useState([]);
-  const [num, setNum] = useState(0);
   const { user } = useAuth();
 
   const getFavorites = () => {
@@ -20,13 +19,12 @@ export default function FavoriteDisplay() {
 
   useEffect(() => {
     getFavorites();
-    setNum(num + 1);
   }, []);
 
   return (
     <Accordion>
       {favorites.map((favorite) => (
-        <AccordionRow key={favorite.id} favoriteProduct={favorite} keyNumber={favorites.indexOf(favorites)} onUpdate={getFavorites} />
+        <AccordionRow key={favorite.id} favoriteProduct={favorite} keyNumber={favorites.indexOf(favorite)} onUpdate={getFavorites} />
       ))}
       {console.warn(favorites)}
     </Accordion>
