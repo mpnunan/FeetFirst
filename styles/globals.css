@@ -120,6 +120,18 @@ body {
   justify-content: flex-end;
 }
 
+.favPriceContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding-right: 32px;
+}
+
+.favoritesCardPrice {
+  width: fit-content;
+  text-align: end;
+}
+
 .favBtnContainer > .favBtn {
   margin: 0px 4px 0px 4px;
 }

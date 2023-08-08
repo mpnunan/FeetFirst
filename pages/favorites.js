@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel, Image } from 'react-bootstrap';
-import FavoriteDisplay from '../components/FavoriteDisplay';
+import FavoriteDisplay from '../components/favoriteDisplay';
 
 export default function Favorites() {
   return (
@@ -29,7 +29,7 @@ export default function Favorites() {
         </Carousel>
       </div>
       <div id="favoritesContent" className="favorites">
-        <h1>This is where your favorites will go. Where will you go?</h1>
+        <h1>This is where your favorites go. Where will you go?</h1>
       </div>
       <div id="favoritesAccordion">
         <FavoriteDisplay />
