@@ -1,8 +1,8 @@
 import { clientCredentials } from '../utils/client';
 import { getAllProducts } from './productData';
 
-const getFavoriteProduct = async (productId, uid) => {
-  const response = await fetch(`${clientCredentials.databaseURL}/products/${productId}/favorite`, {
+const getFavoriteProduct = async (userId, uid) => {
+  const response = await fetch(`${clientCredentials.databaseURL}/favorite_products?user=${userId}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
