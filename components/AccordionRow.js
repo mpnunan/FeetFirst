@@ -15,12 +15,17 @@ export default function AccordionRow({ favoriteProduct, onUpdate, keyNumber }) {
       <Accordion.Header className="favoritesCardContainer">
         <Image className="favoritePic" src={favoriteProduct.product.image_url} />
         <div className="favoritesCardHeader">{favoriteProduct.product.title}</div>
-        <div className="favBtnContainer">
-          <Button className="favBtn" variant="dark" onClick={removeFavorite}>Remove Favorite</Button>
+        <div className="favPriceContainer">
+          <div className="favoritesCardPrice">${favoriteProduct.product.price}</div>
         </div>
       </Accordion.Header>
       <Accordion.Body>
-        {favoriteProduct.product.description}
+        <p>
+          {favoriteProduct.product.description}
+        </p>
+        <div className="favBtnContainer">
+          <Button className="favBtn" variant="dark" onClick={removeFavorite}>Remove Favorite</Button>
+        </div>
       </Accordion.Body>
     </Accordion.Item>
   );
@@ -31,6 +36,7 @@ AccordionRow.propTypes = {
     user: PropTypes.number,
     product: PropTypes.number,
     id: PropTypes.number,
+    price: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
   keyNumber: PropTypes.number.isRequired,

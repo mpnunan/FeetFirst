@@ -1,7 +1,4 @@
 @import 'bootstrap/dist/css/bootstrap.css';
-/* @import 'https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;1,600&display=swap'; */
-/* @import 'https://fonts.googleapis.com/css2?family=Borel&family=Crimson+Text&display=swap'; */
-/* @import 'https://fonts.googleapis.com/css2?family=Borel&family=Crimson+Text&family=Roboto+Condensed:wght@700&display=swap'; */
 @import 'https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap';
 
 html,
@@ -21,20 +18,8 @@ a {
   box-sizing: border-box;
 }
 
-body {
-  background-color: whitesmoke;
-}
-
-/* #homepageCover {
-  background: url("/shoe-cover.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
-.homepage-desc {
-  /* className="text-center d-flex flex-column justify-content-center align-content-center" */
-  /* font-family: 'Borel' 'cursive'; */
-  /* font-family: 'Roboto Condensed', sans-serif; */
+/* David Styling Start */
+.homepage-desc-text {
   font-family: 'Crimson Text', serif;
   text-align: center;
   align-content: center;
@@ -43,6 +28,10 @@ body {
   max-Width: '400px';
   margin: '0 auto';
   font-size: 20,
+}
+
+body {
+  background-color: whitesmoke;
 }
 
 .banner-desc {
@@ -54,6 +43,56 @@ body {
 }
 /* MN-Styling */
 
+.boot {
+  height: auto;
+  width: 40%;
+}
+
+.profile-btn {
+  display: inline-flex;
+}
+
+.user-profile {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.user-profile-page {
+  text-align: center;
+}
+
+.footer {
+  font-family: 'Crimson Text', serif;
+  min-height: 100vh;
+}
+
+.footer-body {
+  position: fixed;
+  background-color: whitesmoke;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  text-align: right;
+}
+
+footer {
+  position: fixed;
+  background-color: whitesmoke;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  text-align: center;
+}
+
+.footer-right {
+  position: fixed;
+  text-align: right;
+}
+/* David Styling End */
+
+/* MN-Styling */
 #favoritesGallery {
   height: 400px;
   width: 100%;
@@ -63,7 +102,6 @@ body {
 .galleryItem {
   height: 400px;
   width: 100%;
-  ;
 }
 
  #mediumImage {
@@ -120,18 +158,7 @@ body {
   margin: 0px 4px 0px 4px;
 }
 
-.view-btn {
-  position: absolute;
-  bottom: -100%;
-  font-size: small;
-  transition: all .4s ease-in-out;
-}
-
 /* MN Styling */
-
-.user-profile {
-  margin: 40px auto;
-}
 
 .favoritesCardContainer {
   height: 52px;
@@ -166,51 +193,21 @@ body {
   justify-content: flex-end;
 }
 
-.favBtnContainer > .favBtn {
-  margin: 0px 4px 0px 4px;
-}
-
-/* MN Styling */
-
-.user-profile {
-  margin: 40px auto;
-}
-
-.favoritesCardContainer {
-  height: 52px;
-}
-
-.favoritesCardContainer > button {
-  height: inherit;
-  padding-left: 0px;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.favoritesCardHeader {
+.favPriceContainer {
   display: flex;
-  align-items: center;
-  height: inherit;
-  white-space: nowrap;
-  text-indent: 24px;
-  width: fit-content;
-  line-height: 1.2;
-}
-
-.favoritePic {
-  height: inherit;
-  width: 72px;
-}
-
-.favBtnContainer {
-  display: flex;
-  width: 100%;
-  padding: 4px 8px;
   justify-content: flex-end;
+  width: 100%;
+  padding-right: 32px;
+}
+
+.favoritesCardPrice {
+  width: fit-content;
+  text-align: end;
 }
 
 .favBtnContainer > .favBtn {
   margin: 0px 4px 0px 4px;
 }
+
 
 /* MN Styling */
