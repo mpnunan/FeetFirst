@@ -4,7 +4,8 @@ import { Accordion } from 'react-bootstrap';
 import AccordionRow from './AccordionRow';
 import { useAuth } from '../utils/context/authContext';
 // import { findFavorites } from '../api/favoriteData';
-import { getAllProducts } from '../api/productData';
+// import { getAllProducts } from '../api/productData';
+import { getFavoriteProduct } from '../api/favoriteData';
 
 export default function FavoriteDisplay() {
   const [favorites, setFavorites] = useState([]);
@@ -13,7 +14,7 @@ export default function FavoriteDisplay() {
 
   const getFavorites = () => {
     // findFavorites(user.uid)
-    getAllProducts(user.uid)
+    getFavoriteProduct(user.id, user.uid)
       .then(setFavorites);
   };
 
@@ -27,6 +28,7 @@ export default function FavoriteDisplay() {
       {favorites.map((favorite) => (
         <AccordionRow key={favorite.id} favoriteProduct={favorite} keyNumber={favorites.indexOf(favorites)} onUpdate={getFavorites} />
       ))}
+      {console.warn(favorites)}
     </Accordion>
   );
 }
