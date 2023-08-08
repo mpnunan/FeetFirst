@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel, Image } from 'react-bootstrap';
+import FavoriteDisplay from '../components/favoriteDisplay';
 import Footer from '../components/Footer';
 
 export default function Favorites() {
