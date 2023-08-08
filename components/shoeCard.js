@@ -20,10 +20,10 @@ function ShoeCard({ shoeObj, onUpdate }) {
           <Button variant="primary" className="view-btn">VIEW</Button>
         </Link>
         {shoeObj.favorite ? (
-          <Heart variant="button" onClick={favButton} className="unfav" />
+          <HeartFill variant="button" onClick={unFavButton} className="unfav" />
         )
           : (
-            <HeartFill variant="button" onClick={unFavButton} className="fav" />
+            <Heart variant="button" onClick={favButton} className="fav" />
           )}
       </Card.Body>
     </Card>
@@ -35,7 +35,7 @@ ShoeCard.propTypes = {
     image_url: PropTypes.string,
     title: PropTypes.string,
     id: PropTypes.number,
-    favorite: PropTypes.number,
+    favorite: PropTypes.bool,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };
