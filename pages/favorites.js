@@ -29,7 +29,10 @@ export default function Favorites() {
         </Carousel>
       </div>
       <div id="favoritesContent" className="favorites">
-        <h6>This is where your favorites will go. Where will you go?</h6>
+        <h1>This is where your favorites go. Where will you go?</h1>
+      </div>
+      <div id="favoritesAccordion">
+        <FavoriteDisplay />
       </div>
       <div className="footer">
         <Footer />
