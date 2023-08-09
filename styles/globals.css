@@ -55,6 +55,10 @@ body {
   font-family: 'Crimson Text', serif;
 }
 
+#favoritesAccordion {
+  margin-bottom: 10%;
+}
+
 .user-profile {
   font-family: 'Crimson Text', serif;
   margin: 40px auto;
