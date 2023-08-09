@@ -206,10 +206,42 @@ footer {
 }
 
 .heart-btn:hover {
-  cursor: cell;
+  cursor: pointer;
 }
 
-.shoeCard:hover {
-  cursor: pointer
+
+#feetfirst-nav-outer {
+  height: fit-content;
+  background-color: transparent;
+  padding-top: 16px;
+}
+
+#feetfirst-nav {
+  height: 48px;
+  background-color: transparent;
+}
+
+#feetfirst-nav-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-spacing {
+  display: flex;
+  min-width: fit-content;
+  max-height: fit-content;
+}
+
+#nav-middle {
+  width:fit-content;
+  padding: 32px;
+}
+
+#nav-right {
+  justify-content: flex-end;
+}
+
+#searchBar {
+  padding-right: 12px;
 }
 /* MN Styling */
