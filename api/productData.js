@@ -13,7 +13,7 @@ const getAllProducts = async (uid) => {
 };
 
 const getSingleProduct = async (id) => {
-  const response = await fetch(`${clientCredentials.databaseURL}/products/{${id}`, {
+  const response = await fetch(`${clientCredentials.databaseURL}/products/${id}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

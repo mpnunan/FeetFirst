@@ -26,7 +26,7 @@ const createFavoriteProduct = async (productId, uid) => {
 };
 
 const deleteFavoriteProduct = async (productId, uid) => {
-  const response = await fetch(`${clientCredentials.databaseURL}/products/${productId}/unFavorite`, {
+  const response = await fetch(`${clientCredentials.databaseURL}/products/${productId}/unfavorite`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
