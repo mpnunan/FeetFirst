@@ -8,7 +8,8 @@ import {
   Nav,
   Button,
 } from 'react-bootstrap';
-import { signIn, signOut } from '../utils/auth';
+// import { signIn, signOut } from '../utils/auth';
+import { signOut } from '../utils/auth';
 
 export default function NavBar() {
   return (
@@ -45,10 +46,51 @@ export default function NavBar() {
             &nbsp;
             &nbsp;
             &nbsp;
-            <Button variant="outline-dark" onClick={signIn} style={{ fontFamily: 'Crimson Text', fontSize: 18 }}>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            {/* <Button variant="outline-dark" onClick={signIn} style={{ fontFamily: 'Crimson Text', fontSize: 18 }}>
               Sign In
             </Button>
-            &nbsp;
+            &nbsp; */}
             <Button variant="outline-dark" onClick={signOut} style={{ fontFamily: 'Crimson Text', fontSize: 18 }}>
               Sign Out
             </Button>
