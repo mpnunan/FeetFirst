@@ -207,5 +207,38 @@ footer {
 
 .heart-btn:hover {
   cursor: pointer;
+  animation: grow-and-shrink 2s infinite;
+
 }
+
+@keyframes grow-and-shrink {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.product-card {
+  border: 1px solid;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 3px rgba(0, 0, 0, .05);
+
+  &:hover {
+    cursor: pointer;
+
+  }
+}
+
+.product-card:hover {
+  transform: translateY(-7px);
+}
+
+
+
 /* MN Styling */
