@@ -209,8 +209,9 @@ footer {
   cursor: pointer;
 }
 
-#_next {
+.container {
   position: relative;
+  z-index: 0;
 }
 
 #feetfirst-nav-outer {
