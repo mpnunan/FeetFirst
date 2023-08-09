@@ -209,15 +209,22 @@ footer {
   cursor: pointer;
 }
 
+#_next {
+  position: relative;
+}
 
 #feetfirst-nav-outer {
   height: fit-content;
   background-color: transparent;
   padding-top: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  backdrop-filter: blur(40px);
 }
 
 #feetfirst-nav {
-  height: 48px;
+  max-height: 48px;
   background-color: transparent;
 }
 
