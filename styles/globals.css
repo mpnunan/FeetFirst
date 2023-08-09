@@ -205,6 +205,20 @@ footer {
   right: 10px;
 }
 
+.cart-btn {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+}
+
+.cart-btn:hover {
+  cursor: pointer;
+}
+
+.cart-img-btn:hover {
+  cursor: pointer;
+}
+
 .heart-btn:hover {
   cursor: pointer;
 }
