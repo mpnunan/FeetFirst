@@ -51,6 +51,17 @@ body {
   margin-bottom: 10%;
 }
 
+.productcardcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px; /* Adjust the gap as needed */
+}
+
+.pageheaderflexwrap {
+  font-family: 'Crimson Text', serif;
+}
+
 #productCardDetails {
   font-family: 'Crimson Text', serif;
 }

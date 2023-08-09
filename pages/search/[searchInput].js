@@ -29,9 +29,9 @@ export default function SearchResult() {
 
   return (
     <div>
-      <h3 className="pageheaderflexwrap">Products</h3>
+      <h3 className="pageheaderflexwrap">Here are the results...</h3>
       <div className="productcardcontainer">
-        {searchResults.length === 0 ? (<p>No products found</p>)
+        {searchResults.length === 0 ? (<p>No items found</p>)
           : (searchResults.map((product) => (
             <ShoeCard key={product.id} shoeObj={product} onUpdate={getSearchResults} />
           )))}
