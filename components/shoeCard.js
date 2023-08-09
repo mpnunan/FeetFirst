@@ -17,7 +17,7 @@ function ShoeCard({ shoeObj, onUpdate }) {
   const favButton = () => createFavoriteProduct(shoeObj.id, user.uid).then(() => onUpdate());
   const unFavButton = () => deleteFavoriteProduct(shoeObj.id, user.uid).then(() => onUpdate());
   return (
-    <Card style={{ width: '18rem', margin: '10px' }}>
+    <Card className="shoeCard" style={{ width: '18rem', margin: '10px' }}>
       <Card.Img variant="top" src={shoeObj.image_url} alt={shoeObj.title} onClick={itemClick} style={{ height: '400px' }} />
       <Card.Body className="product-content" onClick={itemClick} style={{ marginTop: '0px' }}>
         <Card.Title className="view-btn">

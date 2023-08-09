@@ -206,6 +206,10 @@ footer {
 }
 
 .heart-btn:hover {
-  cursor: pointer;
+  cursor: cell;
+}
+
+.shoeCard:hover {
+  cursor: pointer
 }
 /* MN Styling */
