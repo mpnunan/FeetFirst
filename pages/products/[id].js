@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { getSingleProduct } from '../../api/productData';
+import Footer from '../../components/Footer';
 
 export default function ViewProduct() {
   const [productDetails, setProductDetails] = useState({});
@@ -18,13 +19,17 @@ export default function ViewProduct() {
       <div className="d-flex flex-column">
         <img src={productDetails.image_url} alt={productDetails.title} style={{ width: '300px' }} />
       </div>
-      <div className="text-white ms-5 details">
+      {/* <div className="text-black ms-5 details"> */}
+      <div id="productCardDetails">
         <h1>
           {productDetails.title}
         </h1>
-        <p>{productDetails.description}</p>
+        <h6>{productDetails.description}</h6>
         <h3>$ {productDetails.price}</h3>
         <h6>{productDetails.added_on}</h6>
+      </div>
+      <div className="footer">
+        <Footer />
       </div>
     </div>
   );

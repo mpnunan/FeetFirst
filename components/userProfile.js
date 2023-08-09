@@ -52,9 +52,9 @@ export default function UserProfile() {
         />
       </div>
       <div className="profile-font" style={{ marginTop: '35px' }}>
-        <h2 className="post-details-title">{userDetails.first_name} {userDetails.last_name}</h2>
-        <h5 className="post-details-title">{userDetails.email}</h5>
-        <p className="post-details-text">User Name: <em>{userDetails.username}</em> </p>
+        <h1 className="post-details-title">{userDetails.first_name} {userDetails.last_name}</h1>
+        <h4 className="post-details-title">{userDetails.email}</h4>
+        <h4 className="post-details-text">User Name: <em>{userDetails.username}</em> </h4>
         <Button
           className="profile-btn"
           variant="outline-dark"

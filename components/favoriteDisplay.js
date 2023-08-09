@@ -21,7 +21,7 @@ export default function FavoriteDisplay() {
   return (
     <Accordion>
       {favorites.map((favorite) => (
-        <AccordionRow key={favorite.id} favoriteProduct={favorite} keyNumber={favorites.indexOf(favorite)} onUpdate={getFavorites} />
+        <AccordionRow className="favoriteItemDesc" key={favorite.id} favoriteProduct={favorite} keyNumber={favorites.indexOf(favorite)} onUpdate={getFavorites} />
       ))}
       {console.warn(favorites)}
     </Accordion>
