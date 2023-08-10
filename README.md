@@ -1,5 +1,5 @@
 # HACKATHON FE/BE COLLABORATIVE GROUP PROJECT 
-# (Theme - Shoe Store)
+(Theme - Shoe Store)
 # PROJECT NAME: FeetFirst
 
 # Project Overview
