@@ -63,7 +63,7 @@ export default function Cart() {
         </Carousel>
       </div>
       <div id="favoritesContent" className="favorites">
-        <h1 style={{ fontFamily: 'Crimson Text', fontSize: 30 }}>Order Total: ${sum}</h1>
+        <h1 style={{ fontFamily: 'Crimson Text', fontSize: 30 }}>Order Total: ${sum.toFixed(2)}</h1>
       </div>
       <div id="favoritesAccordion">
         <CartDisplay />
