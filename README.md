@@ -20,6 +20,7 @@ This application was designed to simulate a real-world scenario involving both t
 - Authenticated user log-in
 - Home/Landing page with featured products and fully functioning navigation links
 - Shop page containing a full catalog of products with the ability to "heart"/favorite items and add to cart
+- Product details page containing item image, description, price, and last added date
 - Search bar within navbar to search through product names and descriptions
 - Favorites page for generating user-specific wish lists
 - Profile page for user accounts with ability to edit and delete their profile
