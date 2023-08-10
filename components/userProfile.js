@@ -38,7 +38,7 @@ export default function UserProfile() {
   return (
     <>
       <Head>
-        <title>Profile Page</title>
+        <title>Profile</title>
       </Head>
       {/* <div className="d-flex flex-column"> */}
       <div className="user-profile-page">
@@ -70,7 +70,8 @@ export default function UserProfile() {
     </>
   );
 }
-// DOES PROPTYPES NEED TO BE HERE? THROWS AN ERROR WHEN ACTIVE BUT NOT WHEN DISABLED OR REMOVED
+// DOES PROPTYPES NEED TO BE HERE?
+// Throws erros when active: "Warning: Failed prop type: The prop `userObj` is marked as required in `UserProfile`, but its value is `undefined`."
 // UserProfile.propTypes = {
 //   userObj: PropTypes.shape({
 //     username: PropTypes.string,

@@ -5,7 +5,6 @@ export default function Footer() {
   return (
     <div className="footer-body">
       <footer>
-        {/* <hr /> */}
         <div>Connect with us! &nbsp;&nbsp;
           <img src="/gmail-icon.png" alt="gmail-icon" />
           &nbsp;

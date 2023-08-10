@@ -66,6 +66,11 @@ body {
   font-family: 'Crimson Text', serif;
 }
 
+#favoritesContent {
+  font-family: 'Crimson Text', serif;
+  text-align: center;
+}
+
 #favoritesAccordion {
   margin-bottom: 10%;
 }
@@ -78,7 +83,8 @@ body {
 
 footer {
   position: fixed;
-  background-color: #F8F9FA;
+  background-color: whitesmoke;
+  opacity: 90%;
   bottom: 0;
   left: 0;
   right: 0;
