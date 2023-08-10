@@ -51,6 +51,17 @@ body {
   margin-bottom: 10%;
 }
 
+.productcardcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px; /* Adjust the gap as needed */
+}
+
+.pageheaderflexwrap {
+  font-family: 'Crimson Text', serif;
+}
+
 #productCardDetails {
   font-family: 'Crimson Text', serif;
 }
@@ -198,11 +209,15 @@ footer {
 .favBtnContainer > .favBtn {
   margin: 0px 4px 0px 4px;
 }
+.product-card:hover .heart-btn {
+  animation: grow-and-shrink 4s infinite;
+}
 
 .heart-btn {
   position: absolute;
   top: 10px;
   right: 10px;
+  /* animation: grow-and-shrink 2s infinite; */
 }
 
 .cart-btn {
@@ -221,6 +236,38 @@ footer {
 
 .heart-btn:hover {
   cursor: pointer;
+  animation: grow-and-shrink 1s infinite;
+
+}
+
+
+
+@keyframes grow-and-shrink {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.product-card {
+  border: 1px solid;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 3px rgba(0, 0, 0, .05);
+
+  &:hover {
+    cursor: pointer;
+
+  }
+}
+
+.product-card:hover {
+  transform: translateY(-7px);
 }
 
 .container {
