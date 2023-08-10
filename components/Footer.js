@@ -19,7 +19,9 @@ export default function Footer() {
           <img src="/linkedin-icon.png" alt="linked-icon" />
           &nbsp;
           &nbsp;
-          <img src="/github-icon.png" alt="github-icon" />
+          <a href="https://github.com/mpnunan/FeetFirst">
+            <img src="/github-icon.png" alt="github-icon" />
+          </a>
         </div>
         <hr />
         {`| Copyright © Feet First ${year} | NSS Nashville, TN |`}
