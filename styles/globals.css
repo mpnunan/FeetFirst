@@ -220,6 +220,20 @@ footer {
   /* animation: grow-and-shrink 2s infinite; */
 }
 
+.cart-btn {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+}
+
+.cart-btn:hover {
+  cursor: pointer;
+}
+
+.cart-img-btn:hover {
+  cursor: pointer;
+}
+
 .heart-btn:hover {
   cursor: pointer;
   animation: grow-and-shrink 1s infinite;

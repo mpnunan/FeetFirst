@@ -9,10 +9,16 @@ import {
   Button,
 } from 'react-bootstrap';
 // import { signIn, signOut } from '../utils/auth';
+import { Cart4 } from 'react-bootstrap-icons';
+import { useRouter } from 'next/router';
 import { signOut } from '../utils/auth';
 import SearchBar from './SearchBar';
 
 export default function NavBar() {
+  const router = useRouter();
+  const goToCart = () => {
+    router.push('/cart');
+  };
   return (
     <Navbar id="feetfirst-nav-outer" collapseOnSelect expand="lg" variant="light">
       <Container id="feetfirst-nav">
@@ -49,6 +55,7 @@ export default function NavBar() {
             Sign In
           </Button>
           &nbsp; */}
+          <Cart4 className="cart-img-btn" style={{ fontSize: '25px', marginTop: '7px', marginRight: '7px' }} onClick={goToCart} />
           <Button variant="outline-dark" onClick={signOut} style={{ fontFamily: 'Crimson Text', fontSize: 18 }}>
             Sign Out
           </Button>

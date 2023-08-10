@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
-import { Heart, HeartFill } from 'react-bootstrap-icons';
+import { BagPlus, Heart, HeartFill } from 'react-bootstrap-icons';
 import { useRouter } from 'next/router';
 import { createFavoriteProduct, deleteFavoriteProduct } from '../api/favoriteData';
 import { useAuth } from '../utils/context/authContext';
+import { createCartProduct } from '../api/orderData';
 
 function ShoeCard({ shoeObj, onUpdate }) {
   const { user } = useAuth();
@@ -16,6 +17,10 @@ function ShoeCard({ shoeObj, onUpdate }) {
   };
   const favButton = () => createFavoriteProduct(shoeObj.id, user.uid).then(() => onUpdate());
   const unFavButton = () => deleteFavoriteProduct(shoeObj.id, user.uid).then(() => onUpdate());
+
+  const addToCart = () => createCartProduct(shoeObj.id, user.uid).then(() => onUpdate());
+  // const removeFromCart = () => deleteCartProduct(shoeObj.id, user.uid).then(() => onUpdate());
+
   return (
     <Card className="product-card" style={{ width: '18rem', margin: '10px' }}>
       <Card.Img variant="top" src={shoeObj.image_url} alt={shoeObj.title} onClick={itemClick} style={{ height: '250px' }} />
@@ -32,6 +37,9 @@ function ShoeCard({ shoeObj, onUpdate }) {
             <Heart variant="button" onClick={favButton} className="fav" />
           )}
       </div>
+      <div className="cart-btn">
+        <BagPlus onClick={addToCart} className="add-cart">Add</BagPlus>
+      </div>
     </Card>
   );
 }
@@ -42,6 +50,7 @@ ShoeCard.propTypes = {
     title: PropTypes.string,
     id: PropTypes.number,
     favorite: PropTypes.bool,
+    incart: PropTypes.bool,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };
