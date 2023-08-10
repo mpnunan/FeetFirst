@@ -1,9 +1,9 @@
-# HACKATHON FE/BE COLLABORATIVE GROUP PROJECT 
-(Theme - Shoe Store)
+# HACKATHON FE/BE GROUP PROJECT (Theme - Shoe Store)
+
 # PROJECT NAME: FeetFirst
 
 # Project Overview
-This application was designed to simulate a real-world scenario involving both the front-end and back-end teams to create a functioning shoe store website incorporating skills learned throughout the duration of their respective courses. The shoe store will simulate a real company's page complete with authenticated user sign-in/sign-out, product catalog and ability to generate and save cart and favorite items.
+This application was designed to simulate a real-world scenario involving both the front-end and back-end teams to create a functioning shoe store website incorporating skills learned throughout the duration of their respective courses. The shoe store will simulate a real company's webpage complete with authenticated user sign-in/sign-out, product catalog and ability to generate and save cart and favorite items.
 
 # [Project Wireframes](https://www.figma.com/file/HFDXAislqb4PUQGBp6SJA9/Feet-First?type=design&node-id=0-1&mode=design&t=bTu1Lr8mjj4z4iqR-0)
 
