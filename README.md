@@ -9,7 +9,7 @@ This application was designed to simulate a real-world scenario involving both t
 
 # [Data Flowchart](https://dbdiagram.io/embed/64c54e8902bd1c4a5ee8a5d7)
 
-# [Deployed Project]()
+# [Back-end Server Repository](https://github.com/EvgBre/feetfirst-server)
 
 ## About the User
 - The ideal user of this web application is a customer shopping for shoes.
