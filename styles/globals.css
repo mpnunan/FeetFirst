@@ -74,6 +74,7 @@ footer {
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 20px; /* Adjust the gap as needed */
+  margin-bottom: 10%;
 }
 
 .pageheaderflexwrap {
