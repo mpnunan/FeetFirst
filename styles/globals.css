@@ -238,6 +238,7 @@ footer {
 .heart-btn:hover {
   cursor: pointer;
   animation: grow-and-shrink 1s infinite;
+  opacity: .6;
 
 }
 
@@ -321,20 +322,22 @@ footer {
 
 .add-cart:hover {
   opacity: .6;
+  transform: scale(1.2)
 }
 
 .add-cart:active {
   opacity: 1;
-  transform: scale(1.3);
+  transform: scale(.8);
 }
 
 .cart-img-btn:hover {
   opacity: .6 !important;
+  transform: scale(1.2) !important;
 }
 
 .cart-img-btn:active {
   opacity: 1 !important;
-  transform: scale(1.2) !important;
+  transform: scale(.8) !important;
 }
 
 /* MN Styling */
