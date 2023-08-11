@@ -21,12 +21,18 @@ export default function CartDisplay() {
     getCartItems();
   }, [user.id]);
 
+  const sum = cartProducts.reduce((prev, current) => prev + +current.product_id.price, 0);
+
   return (
-    <Accordion>
-      {cartProducts.map((cartItem) => (
-        <CartAccordion className="favoriteItemDesc" key={cartItem.id} cartProduct={cartItem} keyNumber={cartProducts.indexOf(cartItem)} onUpdate={getCartItems} />
-      ))}
-      {console.warn(cartProducts)}
-    </Accordion>
+    <>
+      <div>
+        <h1 style={{ fontFamily: 'Crimson Text', fontSize: 30 }}>Order Total: ${sum.toFixed(2)}</h1>
+      </div>
+      <Accordion>
+        {cartProducts.map((cartItem) => (
+          <CartAccordion className="favoriteItemDesc" key={cartItem.id} cartProduct={cartItem} keyNumber={cartProducts.indexOf(cartItem)} onUpdate={getCartItems} />
+        ))}
+      </Accordion>
+    </>
   );
 }

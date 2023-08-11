@@ -24,8 +24,6 @@ export default function Cart() {
     getCartItems();
   }, [user.id]);
 
-  const sum = cartProducts.reduce((prev, current) => prev + +current.product_id.price, 0);
-
   return (
     <div id="favoritesPage" className="favorites">
       <Head>
@@ -62,9 +60,6 @@ export default function Cart() {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-      </div>
-      <div id="favoritesContent" className="favorites">
-        <h1 style={{ fontFamily: 'Crimson Text', fontSize: 30 }}>Order Total: ${sum.toFixed(2)}</h1>
       </div>
       <div id="favoritesAccordion">
         <CartDisplay />
