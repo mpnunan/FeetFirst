@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { getSingleProduct } from '../../api/productData';
-import Footer from '../../components/Footer';
 
 export default function ViewProduct() {
   const [productDetails, setProductDetails] = useState({});
@@ -31,9 +30,6 @@ export default function ViewProduct() {
         <h6>{productDetails.description}</h6>
         <h3>$ {productDetails.price}</h3>
         <h6>{productDetails.added_on}</h6>
-      </div>
-      <div className="footer">
-        <Footer />
       </div>
     </div>
   );

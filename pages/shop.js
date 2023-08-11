@@ -4,7 +4,6 @@ import Head from 'next/head';
 import { getAllProducts } from '../api/productData';
 import ShoeCard from '../components/shoeCard';
 import { useAuth } from '../utils/context/authContext';
-import Footer from '../components/Footer';
 
 export default function Shop() {
   const { user } = useAuth();
@@ -35,9 +34,6 @@ export default function Shop() {
             <ShoeCard key={shoe.id} shoeObj={shoe} onUpdate={getAllShoes} />
           ))}
         </div>
-      </div>
-      <div className="footer">
-        <Footer />
       </div>
     </>
   );
