@@ -34,6 +34,18 @@ body {
   background-color: whitesmoke;
 }
 
+footer {
+  margin-top: 10%;
+  background-color: whitesmoke;
+  opacity: 90%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  text-align: center;
+  font-family: 'Crimson Text', serif;
+}
+
 .banner-desc {
   margin-top: 45%;
 }
@@ -79,22 +91,6 @@ body {
   font-family: 'Crimson Text', serif;
   margin: 40px auto;
   text-align: center;
-}
-
-footer {
-  background-color: whitesmoke;
-  opacity: 90%;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 8px;
-  text-align: center;
-  font-family: 'Crimson Text', serif;
-}
-
-.footer-right {
-  position: fixed;
-  text-align: right;
 }
 /* David Styling End */
 
