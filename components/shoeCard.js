@@ -18,7 +18,13 @@ function ShoeCard({ shoeObj, onUpdate }) {
   const favButton = () => createFavoriteProduct(shoeObj.id, user.uid).then(() => onUpdate());
   const unFavButton = () => deleteFavoriteProduct(shoeObj.id, user.uid).then(() => onUpdate());
 
-  const addToCart = () => createCartProduct(shoeObj.id, user.uid).then(() => onUpdate());
+  const addToCart = () => {
+    if (shoeObj.incart !== true) {
+      createCartProduct(shoeObj.id, user.uid).then(() => onUpdate());
+    } else {
+      alert('Item already in cart!');
+    }
+  };
   // const removeFromCart = () => deleteCartProduct(shoeObj.id, user.uid).then(() => onUpdate());
 
   return (
