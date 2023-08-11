@@ -314,4 +314,27 @@ footer {
 #searchBar {
   padding-right: 12px;
 }
+
+.add-cart {
+  margin-top: 12px;
+}
+
+.add-cart:hover {
+  opacity: .6;
+}
+
+.add-cart:active {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+.cart-img-btn:hover {
+  opacity: .6 !important;
+}
+
+.cart-img-btn:active {
+  opacity: 1 !important;
+  transform: scale(1.2) !important;
+}
+
 /* MN Styling */
