@@ -25,7 +25,7 @@ export default function NavBar() {
         <Container id="nav-left" className="nav-spacing nav-outer">
           <Link passHref href="/">
             <Navbar.Brand>
-              <img src="/logoNoBG.png" width="70%" height="70%" alt="icon" className="nav-logo" />
+              <img src="/logoNoBG.png" width="70%" height="90%" alt="icon" className="nav-logo" />
             </Navbar.Brand>
           </Link>
         </Container>

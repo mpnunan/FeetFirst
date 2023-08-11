@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
 import { getAllProducts } from '../../api/productData'; // Replace with your product data fetching function
 import ShoeCard from '../../components/shoeCard';
 import { useAuth } from '../../utils/context/authContext';
@@ -29,7 +30,10 @@ export default function SearchResult() {
 
   return (
     <div>
-      <h3 className="pageheaderflexwrap">Here are the results...</h3>
+      <Head>
+        <title>Search</title>
+      </Head>
+      <h4 className="pageheaderflexwrap">Here are the results...</h4>
       <div className="productcardcontainer">
         {searchResults.length === 0 ? (<p>No items found</p>)
           : (searchResults.map((product) => (

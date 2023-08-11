@@ -26,7 +26,7 @@ export default function Shop() {
   return (
     <>
       <Head>
-        <title>Shop Page</title>
+        <title>Shop</title>
       </Head>
       <div className="text-center my-4">
         <div id="shopCards" className="d-flex flex-wrap">

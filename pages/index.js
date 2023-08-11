@@ -15,7 +15,7 @@ function Home() {
   return (
     <>
       <Head>
-        <title>Home Page</title>
+        <title>Home</title>
       </Head>
       <div id="homePage" className="home-page">
         <div id="homeGallery" className="homepage">

@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 import { getSingleProduct } from '../../api/productData';
 import Footer from '../../components/Footer';
 
@@ -16,6 +17,9 @@ export default function ViewProduct() {
 
   return (
     <div className="mt-5 d-flex flex-wrap">
+      <Head>
+        <title>Product Details</title>
+      </Head>
       <div className="d-flex flex-column">
         <img src={productDetails.image_url} alt={productDetails.title} style={{ width: '300px' }} />
       </div>
