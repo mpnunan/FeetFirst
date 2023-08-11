@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { Carousel, Image } from 'react-bootstrap';

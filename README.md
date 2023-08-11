@@ -1,44 +1,37 @@
-# React/Next.js Django Auth Template
+# Hackathon FE/BE Group Project (Theme - Shoe Store)
 
-## Topics
-- [Get Started](#getting-started)
-- [Starting the Project](#starting-the-project)
-___
-## Getting Started
-### Use Template
-#### 1. To get started, click the GREEN "Use this Template" button at the top of the repo
-<img width="915" alt="Screen Shot 2022-07-06 at 12 54 01 PM" src="https://user-images.githubusercontent.com/29741570/177612998-4aac9237-5a1e-4f13-8ae0-468587521564.png">
+# Project/Store Name: FeetFirst
 
-#### 2. Make sure YOUR github account is selected in the dropdown and name your project
-<img width="763" alt="Screen Shot 2022-07-06 at 12 54 48 PM" src="https://user-images.githubusercontent.com/29741570/177613126-dd38f678-7553-4f27-8a4a-75680f14d71e.png">
+# Project Overview
+This application was designed to simulate a real-world scenario involving both the front-end and back-end teams to create a functioning shoe store website incorporating skills learned throughout the duration of their respective courses. The shoe store will simulate a real company's webpage complete with authenticated user sign-in/sign-out, product catalog and ability to generate and save cart and favorite items.
 
-#### 3. Clone your new repo to your local machine
-#### 4. Go to the **NEXT** section
+# [Wireframes](https://www.figma.com/file/HFDXAislqb4PUQGBp6SJA9/Feet-First?type=design&node-id=0-1&mode=design&t=bTu1Lr8mjj4z4iqR-0)
 
-## Starting the Project
-1. Create a Firebase project and set up authentication. Use [these videos](https://vimeo.com/showcase/codetracker-firebase) as a refresher if needed.
-1. Create a `.env` file at the root of the project
-1. Copy/Paste the contents of the `.env.sample` file to your newly created `.env` file.
-1. Copy over all of your Firebase values into the `.env` file.
-1. Open the `package.json` file and change the `name` property to the name of your application, and `author` to  your name.
-1. From your command line, be in the root directory and run `npm install` OR `npm i` for short.
-1. Next, run `npm run prepare`. This command sets up husky to track eslint errors on commit that will make your deploy fail on Netlify.
-1. To start your application, run `npm run dev`. THIS IS THE COMMAND YOU WILL USE TO RUN YOUR DEVELOPMENT SERVER FROM NOW ON.
-1. Open [http://localhost:3000](http://localhost:3000) with your browser.
+# [Data Flowchart](https://dbdiagram.io/embed/64c54e8902bd1c4a5ee8a5d7)
 
-### If you see this, you are set to go!
-<img width="450" alt="Screen Shot 2022-07-06 at 1 07 27 PM" src="https://user-images.githubusercontent.com/29741570/177615077-9b6a75bc-0260-4d29-bb88-bd95a3140687.png">
+# [Back-end Server Repository](https://github.com/EvgBre/feetfirst-server)
 
+## About the User
+- The ideal user of this web application is a customer shopping for shoes.
+- The user can create a wish list of their favorite products and create an open order by adding products to a cart or close an order by removing those items from the cart.
+- Customers are authenticated upon log-in and can save, edit or delete their profiles.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Features
+- Authenticated user log-in
+- Home/Landing page with featured products and fully functioning navigation links
+- Shop page containing a full catalog of products with the ability to "heart"/favorite items and add to cart
+- Product details page containing item image, description, price, and last added date
+- Search bar within navbar to search through product names and descriptions
+- Favorites page for generating user-specific wish lists
+- Profile page for user accounts with ability to edit and delete their profile
+- Full CRUD (Create, Read, Update, Delete) on user profiles
+- Cart Checkout for holding products added to cart and tracks cart totals in real-time allowing for addition or removal of products
 
-**NOTES:** 
-- If you see the following error, you did not follow all the setup steps correctly and failed to add your Firebase creds. Go back and do that NOW.
+## Project Screenshots
 
-<img width="1043" alt="Screen Shot 2022-07-06 at 11 18 45 AM" src="https://user-images.githubusercontent.com/29741570/177612501-c2628f18-4bbd-4de9-aae6-27ffba1172d6.png">
-        
-## Learn More about Next.js
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributors
+- [Evan Breland](https://github.com/EvgBre)
+- [Mark Hamilton](https://github.com/markh126)
+- [Michael Nunan](https://github.com/mpnunan)
+- [David Poole](https://github.com/DavidBPoole)
+- [Hallie Tucker](https://github.com/datcog1111)

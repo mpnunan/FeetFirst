@@ -19,10 +19,12 @@ function Signin() {
       }}
     >
       <h1>Hi there!</h1>
-      <p>Click the button below to login!</p>
-      <Button type="button" size="lg" className="copy-btn" onClick={signIn}>
-        Sign In
-      </Button>
+      <p>Click the button to login and start shopping!</p>
+      <div>
+        <Button variant="primary" type="button" size="lg" style={{ width: 110 }} className="copy-btn" onClick={signIn}>
+          Sign In
+        </Button>
+      </div>
     </div>
   );
 }
