@@ -31,7 +31,7 @@ This application was designed to simulate a real-world scenario involving both t
 ![Home Page](https://github.com/mpnunan/FeetFirst/assets/127453405/e5d04279-e9ba-4f2c-8c0d-7d53438b3e36)
 ![Shop Page](https://github.com/mpnunan/FeetFirst/assets/127453405/d5afe93a-1d47-4f42-97e1-57dea9db185e)
 ![Product Details Page](https://github.com/mpnunan/FeetFirst/assets/127453405/d1ccad22-ab13-447a-9dc5-dfa9f9805cef)
-![Favorites Page](https://github.com/mpnunan/FeetFirst/assets/127453405/9d0c340d-eff9-443c-bf79-aee24b6bd41f)
+![Favorites Page](https://github.com/mpnunan/FeetFirst/assets/127453405/9c906c0b-fdb2-4c1b-9e88-1dab598dd45b)
 ![Search Results Page](https://github.com/mpnunan/FeetFirst/assets/127453405/7ac69c3e-39a0-4a1e-9ef5-ce3ff2b4502c)
 ![Checkout Page](https://github.com/mpnunan/FeetFirst/assets/127453405/0701b75e-750e-424f-8636-0ba61231cdba)
 
