@@ -1,12 +1,16 @@
 @import 'bootstrap/dist/css/bootstrap.css';
 @import 'https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap';
 
-html,
+html {
+  position: relative;
+}
+
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    min-height: 100vh;
 }
 
 a {
@@ -35,6 +39,7 @@ body {
 }
 
 footer {
+  position: absolute;
   margin-top: 10%;
   background-color: whitesmoke;
   opacity: 90%;
@@ -44,6 +49,7 @@ footer {
   padding: 8px;
   text-align: center;
   font-family: 'Crimson Text', serif;
+  z-index: 0;
 }
 
 .banner-desc {
@@ -275,6 +281,10 @@ footer {
 .container {
   position: relative;
   z-index: 0;
+  height: 100%;
+  min-height: fit-content;
+  padding: 16px;
+  margin-bottom: 32px;
 }
 
 #feetfirst-nav-outer {

@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { Carousel, Image } from 'react-bootstrap';
-import Footer from '../components/Footer';
 import CartDisplay from '../components/cartDisplay';
 import { useAuth } from '../utils/context/authContext';
 import { getCartProducts, getOrdersByUser } from '../api/orderData';
@@ -63,9 +62,6 @@ export default function Cart() {
       </div>
       <div id="favoritesAccordion">
         <CartDisplay />
-      </div>
-      <div className="footer">
-        <Footer />
       </div>
     </div>
   );
