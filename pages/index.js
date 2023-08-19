@@ -3,13 +3,7 @@ import { useRouter } from 'next/router';
 import { Button, Image, Carousel } from 'react-bootstrap';
 import Head from 'next/head';
 
-// import Link from 'react';
-// import { SHOP } from '../components/routers/routes';
-// import { signOut } from '../utils/auth';
-// import { useAuth } from '../utils/context/authContext';
-
 function Home() {
-  // const { user } = useAuth();
   const router = useRouter();
   return (
     <>
