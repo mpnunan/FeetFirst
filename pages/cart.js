@@ -19,7 +19,6 @@ export default function Cart() {
   };
 
   useEffect(() => {
-    // getUserOrder();
     getCartItems();
   }, [user.id]);
 
