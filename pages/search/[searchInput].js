@@ -7,7 +7,6 @@ import ShoeCard from '../../components/shoeCard';
 import { useAuth } from '../../utils/context/authContext';
 
 export default function SearchResult() {
-  // FUNCTION TO GET THE APP USER OBJECT
   const [searchResults, setSearchResults] = useState([]);
   const { user } = useAuth();
   const router = useRouter();
