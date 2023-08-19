@@ -25,7 +25,6 @@ function ShoeCard({ shoeObj, onUpdate }) {
       alert('Item already in cart!');
     }
   };
-  // const removeFromCart = () => deleteCartProduct(shoeObj.id, user.uid).then(() => onUpdate());
 
   return (
     <Card className="product-card" style={{ width: '18rem', margin: '10px' }}>
