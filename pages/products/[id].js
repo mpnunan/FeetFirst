@@ -22,7 +22,6 @@ export default function ViewProduct() {
       <div className="d-flex flex-column">
         <img src={productDetails.image_url} alt={productDetails.title} style={{ width: '300px' }} />
       </div>
-      {/* <div className="text-black ms-5 details"> */}
       <div id="productCardDetails">
         <h1>
           {productDetails.title}
