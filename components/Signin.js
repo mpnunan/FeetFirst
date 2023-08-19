@@ -2,7 +2,6 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { signIn } from '../utils/auth';
 
-// THIS COULD POTENTIALLY BE PART OF THE LANDING PAGE THAT SHOWS PRODUCTS AND UPON CLICKING A SHOP BUTTON RERENDERS A SIMILAR OR IDENTICAL VIEW TO BETTER CREATE AN AUTHENTIC SHOPPING EXPERIENCE
 function Signin() {
   return (
     <div
