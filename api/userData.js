@@ -11,13 +11,6 @@ const getSingleUser = async (id) => {
   return user;
 };
 
-// const getSingleUser = (id) => new Promise((resolve, reject) => {
-//   fetch(`${clientCredentials.databaseURL}/users/${id}`)
-//     .then((response) => response.json())
-//     .then(resolve)
-//     .catch(reject);
-// });
-
 const createUser = async (payload) => {
   const response = await fetch(`${clientCredentials.databaseURL}/users/`, {
     method: 'POST',
@@ -50,7 +43,6 @@ const deleteUser = async (id) => {
       'Content-Type': 'application/json',
     },
   });
-  // const user = await response;
   return response;
 };
 
