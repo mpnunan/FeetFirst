@@ -7,14 +7,11 @@ export default function UpdateUser() {
   const [editUser, setEditUser] = useState({});
   const router = useRouter();
 
-  // GRAB ID
   const { id } = router.query;
 
-  // MAKE CALL TO API TO GET USER DATA
   useEffect(() => {
     getSingleUser(id).then(setEditUser);
   }, [id]);
 
-  // PASS OBJECT TO FORM
   return (<RegisterForm user={editUser} />);
 }
