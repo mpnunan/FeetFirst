@@ -36,18 +36,6 @@ const deleteFavoriteProduct = async (productId, uid) => {
   return response;
 };
 
-// const findFavorites = async (uid) => {
-//   await getAllProducts(uid).then((productArray) => {
-//     const favoriteArray = [];
-//     productArray.forEach((product) => {
-//       if (getSingleProduct(product.id) === getFavoriteProduct({}.product, uid)) {
-//         favoriteArray.push(product);
-//       }
-//     });
-//     return favoriteArray;
-//   });
-// };
-
 const findFavorites = async (uid) => {
   const products = await getAllProducts(uid);
   const favorites = products.forEach((product) => {
