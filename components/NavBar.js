@@ -8,7 +8,6 @@ import {
   Nav,
   Button,
 } from 'react-bootstrap';
-// import { signIn, signOut } from '../utils/auth';
 import { Cart4 } from 'react-bootstrap-icons';
 import { useRouter } from 'next/router';
 import { signOut } from '../utils/auth';
@@ -33,7 +32,6 @@ export default function NavBar() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav id="feetfirst-nav-inner">
-              {/* CLOSE NAVBAR ON LINK SELECTION: https://stackoverflow.com/questions/72813635/collapse-on-select-react-bootstrap-navbar-with-nextjs-not-working */}
               <Link passHref href="/">
                 <Nav.Link style={{ fontFamily: 'Crimson Text', fontSize: 20 }}>Home</Nav.Link>
               </Link>
