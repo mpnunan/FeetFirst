@@ -51,10 +51,6 @@ export default function NavBar() {
         </Container>
         <Container id="nav-right" className="nav-outer nav-spacing">
           <SearchBar />
-          {/* <Button variant="outline-dark" onClick={signIn} style={{ fontFamily: 'Crimson Text', fontSize: 18 }}>
-            Sign In
-          </Button>
-          &nbsp; */}
           <Cart4 className="cart-img-btn" style={{ fontSize: '25px', marginTop: '7px', marginRight: '7px' }} onClick={goToCart} />
           <Button variant="outline-dark" onClick={signOut} style={{ fontFamily: 'Crimson Text', fontSize: 18 }}>
             Sign Out
